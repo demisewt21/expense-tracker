@@ -1,9 +1,30 @@
-// ====================== Footer.jsx ======================
-// Place in src/components/layout/Footer.jsx
-
 import { Link } from 'react-router-dom';
 import { Heart, Github, Twitter, Linkedin } from 'lucide-react';
 
+const QuickLinks = ({to,label}) => {
+  return (
+    <Link 
+              to={to} 
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              {label}
+            </Link>
+  )
+}
+
+const SocialIcons = ({ href }) => {
+  return (
+    <a
+      href={href}                 // external link
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-emerald-400 transition-colors"
+      aria-label="GitHub"
+    >
+      <Github className="w-5 h-5" />
+    </a>
+  );
+};
 const Footer = () => {
   return (
     <footer className="bg-zinc-900 border-t border-white/10 py-8 px-6 md:px-8 mt-auto">
@@ -21,38 +42,22 @@ const Footer = () => {
 
           {/* Center: Quick Links */}
           <div className="flex items-center gap-x-8 text-sm">
-            <Link 
-              to="/" 
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
-              Dashboard
-            </Link>
-            <Link 
-              to="/history" 
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
-              History
-            </Link>
-            <Link 
-              to="/expense-form" 
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
-              Expenses
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-zinc-400 hover:text-white transition-colors"
-            >
-              About
-            </Link>
+            <QuickLinks to = "/dashboard" label = "Dashboard"/>
+            <QuickLinks to = "/history" label = "History"/>
+            <QuickLinks to = "/expense-form" label = "Expenses"/>
+            
           </div>
 
           {/* Right: Social Icons + Legal */}
           <div className="flex items-center gap-x-6">
             <div className="flex gap-x-5 text-zinc-400">
+              <SocialIcons to = "https://github.com/demisewt21/Demisew" />
+
               <Link to="https://github.com/demisewt21/Demisew" className="hover:text-emerald-400 transition-colors" aria-label="GitHub">
                 <Github className="w-5 h-5" />
               </Link>
+
+
               <a href="#" className="hover:text-emerald-400 transition-colors" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>

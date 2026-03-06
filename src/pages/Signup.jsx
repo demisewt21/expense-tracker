@@ -1,8 +1,6 @@
-// ====================== 2. Signup.jsx ======================
-// Place in src/pages/Signup.jsx or src/components/auth/Signup.jsx
-
 import { useState } from 'react';
 import { Wallet, Eye, EyeOff } from 'lucide-react';
+import {FormInput, FormEmail} from './signUp/FormInput';
 
 const Signup = ({ onSignup }) => {
   const [firstName, setFirstName] = useState('');
@@ -41,7 +39,22 @@ const Signup = ({ onSignup }) => {
 
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid grid-cols-2 gap-6">
-              <div>
+              <FormInput 
+              label = 'First Name'
+              type='text'
+              value={firstName}
+              onChange={setFirstName}
+              placeholder = 'Alex'
+              required/>
+              <FormInput 
+              label = 'Last Name'
+              type='text'
+              value={lastName}
+              onChange={setLastName}
+              placeholder = 'Hailu'
+              required/>
+              
+              {/* <div>
                 <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">FIRST NAME</label>
                 <input
                   type="text"
@@ -62,8 +75,25 @@ const Signup = ({ onSignup }) => {
                   placeholder="Rivera"
                   required
                 />
-              </div>
+              </div> */}
             </div>
+
+
+            {/* <FormEmail
+            label = 'EMAIL ADDRESS'
+              type='email'
+              value={email}
+              onChange={setEmail}
+              placeholder = 'you@email.com'
+              required/>
+              <FormEmail
+            label = 'CREATE PASSWORD'
+              type={showPassword? 'text' : 'password'}
+              value={password}
+              onChange={setPassword}
+              placeholder = '••••••••'
+              required/> */}
+
 
             <div>
               <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">EMAIL ADDRESS</label>
@@ -76,7 +106,6 @@ const Signup = ({ onSignup }) => {
                 required
               />
             </div>
-
             <div>
               <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">CREATE PASSWORD</label>
               <div className="relative">

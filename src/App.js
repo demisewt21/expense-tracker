@@ -6,11 +6,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import History from './pages/History';
 import SharedLayout from './components/sharedLayout/SharedLayout';
-import ExpenseTable from './components/expenses/ExpenseTable';
-
-
-
-
+// import NavItem from './components/ui/NavItem';
 function App() {
   return (
   <div>
@@ -22,15 +18,11 @@ function App() {
       <Route path='/signup' element = {<Signup/>}/>
       <Route path='/login' element = {<Login/>}/>
       <Route path='/history' element = {<History/>}/>
-      <Route path='expense-table' element = {<ExpenseTable/>}/>
+      
       </Route>
       
     </Routes>
       
-    
-    
-    
-    
 </div>
 
   );

@@ -1,6 +1,3 @@
-// ====================== 3. History.jsx ======================
-// Place in src/pages/History.jsx
-
 import { useState } from 'react';
 import { Download, Search, Filter } from 'lucide-react';
 
