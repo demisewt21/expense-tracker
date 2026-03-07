@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Wallet, Eye, EyeOff } from 'lucide-react';
-import {FormInput, FormEmail} from './signUp/FormInput';
+import FormInput from '../components/ui/Input';
 
 const Signup = ({ onSignup }) => {
   const [firstName, setFirstName] = useState('');
@@ -53,80 +53,37 @@ const Signup = ({ onSignup }) => {
               onChange={setLastName}
               placeholder = 'Hailu'
               required/>
-              
-              {/* <div>
-                <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">FIRST NAME</label>
-                <input
-                  type="text"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl px-6 py-5 text-lg outline-none transition-all"
-                  placeholder="Alex"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">LAST NAME</label>
-                <input
-                  type="text"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl px-6 py-5 text-lg outline-none transition-all"
-                  placeholder="Rivera"
-                  required
-                />
-              </div> */}
             </div>
-
-
-            {/* <FormEmail
+             <FormInput
             label = 'EMAIL ADDRESS'
               type='email'
               value={email}
               onChange={setEmail}
               placeholder = 'you@email.com'
-              required/>
-              <FormEmail
-            label = 'CREATE PASSWORD'
-              type={showPassword? 'text' : 'password'}
-              value={password}
-              onChange={setPassword}
-              placeholder = '••••••••'
-              required/> */}
+              required
+              fullWidth/>
+              <div className="relative w-full">
+                <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">
+    CREATE PASSWORD
+  </label>
+  <input
+    type={showPassword ? "text" : "password"}
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    placeholder="••••••••"
+    required
+    className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl px-6 py-5 text-lg outline-none"
+  />
 
-
-            <div>
-              <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">EMAIL ADDRESS</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl px-6 py-5 text-lg outline-none transition-all"
-                placeholder="you@email.com"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-medium tracking-widest text-zinc-400 mb-2">CREATE PASSWORD</label>
-              <div className="relative">
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl px-6 py-5 text-lg outline-none transition-all"
-                  placeholder="••••••••"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-6 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
-                >
-                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                </button>
-              </div>
-            </div>
-
+  <button
+    type="button"
+    onClick={() => setShowPassword(!showPassword)}
+    className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+  >
+    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+  </button>
+</div>
+          
             <button
               type="submit"
               disabled={loading}
