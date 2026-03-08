@@ -1,34 +1,4 @@
-// import React from 'react';
-// const Dashboard = () => {
-//   return (
-//     <div className="min-h-screen bg-gray-100 p-8">
-//       <h1 className="text-3xl font-bold text-blue-600">SmartSpend Dashboard</h1>
-//       <p className="mt-4 text-gray-600">እንኳን ወደ ሂሳብ መቆጣጠሪያ ሲስተምህ በሰላም መጣህ!</p>
-      
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-//         <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-//           <h2 className="text-sm font-medium text-gray-500 uppercase">ጠቅላላ ገቢ</h2>
-//           <p className="text-2xl font-bold text-gray-800">0.00 ETB</p>
-//         </div>
-//         <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-//           <h2 className="text-sm font-medium text-gray-500 uppercase">ጠቅላላ ወጪ</h2>
-//           <p className="text-2xl font-bold text-gray-800">0.00 ETB</p>
-//         </div>
-//         <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-//           <h2 className="text-sm font-medium text-gray-500 uppercase">ቀሪ ሂሳብ</h2>
-//           <p className="text-2xl font-bold text-gray-800">0.00 ETB</p>
-//         </div>
-//       </div>
-      
-          
-//     </div>
-//   );
-// };
 
-// export default Dashboard;
-
-// ====================== 2. Dashboard.jsx ======================
-// Place in src/pages/Dashboard.jsx or src/components/Dashboard.jsx
 
 import { ArrowUp, ArrowDown } from 'lucide-react';
 

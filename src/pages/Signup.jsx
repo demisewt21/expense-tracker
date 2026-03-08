@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Wallet, Eye, EyeOff } from 'lucide-react';
-import FormInput from '../components/ui/Input';
+import {FormInput} from '../components/ui/Input';
 
 const Signup = ({ onSignup }) => {
   const [firstName, setFirstName] = useState('');

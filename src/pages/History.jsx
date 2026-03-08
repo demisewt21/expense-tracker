@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Download, Search, Filter } from 'lucide-react';
+import { SummaryCard, Table} from '../components/ui/Input'
 
 const History = ({ transactions = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -72,32 +73,38 @@ const History = ({ transactions = [] }) => {
         </div>
 
         {/* Summary Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <div className="bg-zinc-900 border border-white/10 rounded-3xl p-7">
-            <div className="text-emerald-400 text-xs tracking-widest">FILTERED INCOME</div>
-            <div className="text-4xl font-semibold text-emerald-400 mt-3 tabular-nums">+${totalIncome.toFixed(2)}</div>
-          </div>
-          <div className="bg-zinc-900 border border-white/10 rounded-3xl p-7">
-            <div className="text-rose-400 text-xs tracking-widest">FILTERED EXPENSES</div>
-            <div className="text-4xl font-semibold text-rose-400 mt-3 tabular-nums">-${totalExpense.toFixed(2)}</div>
-          </div>
-          <div className="bg-zinc-900 border border-white/10 rounded-3xl p-7">
-            <div className="text-white text-xs tracking-widest">NET IN THIS VIEW</div>
-            <div className="text-4xl font-semibold text-white mt-3 tabular-nums">
-              ${(totalIncome - totalExpense).toFixed(2)}
-            </div>
-          </div>
-        </div>
+        
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+  <SummaryCard
+    title="FILTERED INCOME"
+    amount={totalIncome}
+    color="emerald"
+  />
+
+  <SummaryCard
+    title="FILTERED EXPENSES"
+    amount={totalExpense}
+    color="rose"
+  />
+
+  <SummaryCard
+    title="NET IN THIS VIEW"
+    amount={totalIncome - totalExpense}
+    color="White"
+  />
+
+</div>
 
         {/* Beautiful Table */}
         <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="border-b border-white/10">
-                <th className="text-left py-7 px-8 text-xs font-medium tracking-widest text-zinc-400">DATE</th>
-                <th className="text-left py-7 px-8 text-xs font-medium tracking-widest text-zinc-400">DESCRIPTION</th>
-                <th className="text-left py-7 px-8 text-xs font-medium tracking-widest text-zinc-400">CATEGORY</th>
-                <th className="text-right py-7 px-8 text-xs font-medium tracking-widest text-zinc-400">AMOUNT</th>
+              <Table label="DATE"/>
+              <Table label="DESCRIPTION"/>
+              <Table label="CATEGORY"/>
+              <Table label="AMOUNT"/>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/10">
