@@ -26,7 +26,7 @@ const History = ({ transactions = [] }) => {
     .reduce((sum, t) => sum + Math.abs(t.amount), 0);
 
   return (
-    <div className="p-6 md:p-8 bg-zinc-950 min-h-[calc(100vh-4rem)] overflow-auto">
+    <div className="p-6 md:p-8 min-h-[calc(100vh-4rem)] overflow-auto">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">

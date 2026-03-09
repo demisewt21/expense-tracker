@@ -30,7 +30,8 @@ const ExpenseForm = ({ onAddTransaction }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="min-h-screen bg-gradient-to-br via-zinc-900 to-black flex items-center justify-center">
+    <div className=" max-w-2xl mx-auto p-6">
       <div className="bg-zinc-900 border border-white/10 rounded-3xl p-10">
         <h2 className="text-3xl font-semibold mb-8 tracking-tight">New Transaction</h2>
 
@@ -124,6 +125,7 @@ const ExpenseForm = ({ onAddTransaction }) => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

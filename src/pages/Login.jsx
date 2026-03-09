@@ -19,7 +19,7 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center bg-[radial-gradient(at_top_right,#10b98110_0%,transparent_70%)]">
+    <div className="min-h-screen flex items-center justify-center bg-[radial-gradient(at_top_right,#10b98110_0%,transparent_70%)]">
       <div className="w-full max-w-md mx-4">
         {/* Logo Header */}
         <div className="flex justify-center items-center gap-x-4 mb-12">

@@ -5,17 +5,32 @@ const ExpenseTable = () => {
   const transactions = [
     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
     { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+     { id: 1, amount: 200, category: 'ምግብ', description: 'ምሳ', date: '2024-05-20' },
+    { id: 2, amount: 50, category: 'ትራንስፖርት', description: 'ታክሲ', date: '2024-05-20' },
+    
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border overflow-hidden mt-8">
-      <div className="p-4 border-b bg-gray-50">
-        <h3 className="font-semibold text-gray-800">የቅርብ ጊዜ እንቅስቃሴዎች</h3>
+    <div className="bg-blue-1000 rounded-xl shadow-sm border overflow-hidden mt-8">
+      <div className="bg-blue-950  p-4 border-b bg-gray-50 ">
+        <h3 className="font-semibold text-white-800">የቅርብ ጊዜ እንቅስቃሴዎች</h3>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="text-sm font-medium text-gray-500 border-b">
+            <tr className="text-sm font-medium text-white-500 border-b">
               <th className="p-4">ቀን</th>
               <th className="p-4">መግለጫ</th>
               <th className="p-4">ምድብ</th>

@@ -27,7 +27,7 @@ const SocialIcons = ({ href }) => {
 };
 const Footer = () => {
   return (
-    <footer className="bg-zinc-900 border-t border-white/10 py-8 px-6 md:px-8 mt-auto">
+    <footer className="bg-zinc-900 border-t border-white/10 py-8 px-6 md:px-8 mt-auto flex-1">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           

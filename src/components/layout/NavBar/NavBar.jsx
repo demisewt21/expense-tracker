@@ -79,6 +79,7 @@ const Navbar = ({ pageTitle = "Dashboard", onNewTransaction }) => {
           <NavItem to = "/expense-form" label = "Expense"/>
           <NavItem to = "/signup" label = "Signup"/>
           <NavItem to = "/login" label = "Login"/>
+          <NavItem to = "/expense-table" label = "ExpenseTable"/>
         </div>
       </div>
 

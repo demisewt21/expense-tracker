@@ -17,7 +17,7 @@ const Dashboard = ({ transactions = [] }) => {
   const recentTransactions = transactions.slice(0, 4);
 
   return (
-    <div className="p-6 md:p-8 bg-zinc-950 min-h-[calc(100vh-4rem)] overflow-auto">
+    <div className="p-6 md:p-8 min-h-[calc(100vh-4rem)] overflow-auto">
       {/* Greeting + Balance */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
         <div>
