@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Download, Search, Filter } from 'lucide-react';
+import { Download, Search } from 'lucide-react';
 import { SummaryCard, Table} from '../components/ui/Input'
 
 const History = ({ transactions = [] }) => {

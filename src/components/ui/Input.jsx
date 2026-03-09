@@ -1,5 +1,3 @@
-import { Wallet, Eye, EyeOff, Icon } from 'lucide-react'; 
-// import Signup from '../../pages/Signup';        
 const FormInput = ({ label, type, value, onChange, placeholder, required, fullWidth, icon }) => {
   return (
     <div className={fullWidth ? "col-span-2" : ""}>
@@ -20,7 +18,7 @@ const FormInput = ({ label, type, value, onChange, placeholder, required, fullWi
 };
 
 const  SummaryCard = ({ title, amount = 0, color }) => {
-  const textColor = color === "white" ? "text-white" : `text-${color}-400`;
+  // const textColor = color === "white" ? "text-white" : `text-${color}-400`;
   return (
     <div className="bg-zinc-900 border border-white/10 rounded-3xl p-7">
       
@@ -42,55 +40,5 @@ const Table = ({label}) => {
   )
 }
 
-
-
-// const StatsCard = ({ 
-//   title, 
-//   amount = 0, 
-//   color, 
-//   Icon, 
-//   trend, 
-//   trendText 
-// }) => {
-//   // Tailwind color classes
-//   const textColor = color === "white" ? "text-white" : `text-${color}-400`;
-//   const trendColor = trend.startsWith("↑") ? "text-green-400" : "text-rose-400";
-
-//   return (
-//     <div className="bg-zinc-900/70 border border-white/10 rounded-3xl p-8 hover:-translate-y-1 transition-all duration-300">
-//       <div className="flex justify-between items-start">
-//         <div>
-//           <div className={`flex items-center gap-x-3 ${textColor}`}>
-//             {Icon && <Icon className="w-6 h-6" />}
-//             <span className="font-medium tracking-widest text-sm">{title}</span>
-//           </div>
-//           <p className="text-4xl font-semibold mt-4 tabular-nums">${Number(amount).toFixed(2)}</p>
-//         </div>
-//         <div className={`text-7xl opacity-10 ${textColor}`}>
-//           {trend.startsWith("↑") ? "↑" : "↓"}
-//         </div>
-//       </div>
-//       <p className={`text-sm mt-8 flex items-center gap-1 ${textColor}`}>
-//         <span className={trendColor}>{trend}</span> {trendText}
-//       </p>
-//     </div>
-//   );
-// };
-
-
-  
-// const Button = ({showPassword, setShowPassword}) => {
-//     return (
-//         <div>
-//             <button
-//                   type="button"
-//                   onClick={() => setShowPassword(!showPassword)}
-//                   className="absolute right-6 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
-//                 >
-//                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-//                 </button>
-//         </div>
-//     )
-// }
 
 export {FormInput, SummaryCard, Table} ;
