@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { ExpenseInput } from '../ui/Input';
+import { TypeOfTransaction } from '../ui/Input';
+// import { Icon, DollarSign } from 'lucide-react';
 
 const ExpenseForm = ({ onAddTransaction }) => {
   const [type, setType] = useState('expense'); // 'expense' or 'income'
@@ -58,21 +61,15 @@ const ExpenseForm = ({ onAddTransaction }) => {
           </div>
 
           {/* Amount */}
-          <div>
-            <label className="block text-xs font-medium text-zinc-400 mb-2 tracking-widest">AMOUNT</label>
-            <div className="relative">
-              <span className="absolute left-6 top-4 text-3xl text-zinc-400">$</span>
-              <input
-                type="number"
-                step="0.01"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                placeholder="0.00"
-                className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl pl-12 py-5 text-4xl outline-none transition-all"
-                required
-              />
-            </div>
-          </div>
+          <ExpenseInput 
+          label="AMOUNT"
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          placeholder="0.00"
+          icon = "$"
+          required
+          />
 
           {/* Category */}
           <div>
@@ -93,16 +90,15 @@ const ExpenseForm = ({ onAddTransaction }) => {
           </div>
 
           {/* Description */}
-          <div>
-            <label className="block text-xs font-medium text-zinc-400 mb-2 tracking-widest">DESCRIPTION</label>
-            <input
-              type="text"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              placeholder="Starbucks coffee..."
-              className="w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl px-6 py-5 outline-none"
-            />
-          </div>
+          <ExpenseInput 
+          label="DESCRIPTION"
+          type="text"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Starbucks coffee..."
+          icon = ""
+          textSize = "text-lg"
+          />
 
           {/* Date */}
           <div>

@@ -40,5 +40,45 @@ const Table = ({label}) => {
   )
 }
 
+const ExpenseInput = ({label, type, value, onChange, required, placeholder, icon, textSize}) => {
+  return (
+    <div>
+            <label className="block text-xs font-medium text-zinc-400 mb-2 tracking-widest">{label}</label>
+            <div className="relative">
+              <span className="absolute left-6 top-4 text-3xl text-zinc-400">{icon}</span>
+              <input
+                type={type}
+                step={0.01}
+                value={value}
+                onChange={onChange}
+                placeholder={placeholder}
+                className={`w-full bg-zinc-950 border border-white/10 focus:border-emerald-500 rounded-2xl pl-12 py-5 text-4xl ${textSize} outline-none transition-all`}
+                required={required}
+              />
+            </div>
+          </div>
+  )
+}
 
-export {FormInput, SummaryCard, Table} ;
+// const TypeOfTransaction = ({label, type, onClick, TransactionType}) => {
+//   return (
+//     <div>
+//             {/* <label className="block text-xs font-medium text-zinc-400 mb-3 tracking-widest">{label}</label> */}
+//             {/* <div className="grid grid-cols-2 border border-white/10 rounded-2xl overflow-hidden"> */}
+//               <button
+//                 type={type}
+//                 TransactionType = {TransactionType}
+//                 onClick={onClick}
+//                 className={`py-4 font-semibold transition-all ${TransactionType === 'expense' ? 'bg-rose-500 text-white' : 'bg-zinc-900 text-zinc-400'}`}
+//               >
+//                 {label}
+                
+//               </button>
+              
+//               </div>
+//               // </div>
+//   )
+// }
+
+
+export {FormInput, SummaryCard, Table, ExpenseInput} ;
