@@ -51,7 +51,7 @@ const Footer = () => {
           {/* Right: Social Icons + Legal */}
           <div className="flex items-center gap-x-6">
             <div className="flex gap-x-5 text-zinc-400">
-              <SocialIcons to = "https://github.com/demisewt21/Demisew" />
+              
 
               <Link to="https://github.com/demisewt21/Demisew" className="hover:text-emerald-400 transition-colors" aria-label="GitHub">
                 <Github className="w-5 h-5" />

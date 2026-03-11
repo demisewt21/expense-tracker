@@ -41,7 +41,7 @@ const UserSection = () => {
   return (
     <div className="flex items-center gap-x-4 pl-6 border-l border-white/10">
           <div className="hidden sm:block text-right">
-            <p className="text-sm font-medium text-white">ሰላም፣ ደሚሰው 👋</p>
+            <p className="text-sm font-medium text-white">ሰላም ደምሰው 👋</p>
             <p className="text-xs text-zinc-500">demo@smartspend.com</p>
           </div>
 

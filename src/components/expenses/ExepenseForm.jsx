@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { ExpenseInput } from '../ui/Input';
-import { TypeOfTransaction } from '../ui/Input';
-// import { Icon, DollarSign } from 'lucide-react';
+// import { TypeOfTransaction } from '../ui/Input';
 
 const ExpenseForm = ({ onAddTransaction }) => {
   const [type, setType] = useState('expense'); // 'expense' or 'income'

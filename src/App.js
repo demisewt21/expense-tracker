@@ -6,10 +6,10 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import History from './pages/History';
 import SharedLayout from './components/sharedLayout/SharedLayout';
-import AnimatedBackground from './components/AnimatedBackground';
 import ExpenseTable from './components/expenses/ExpenseTable';
 import Footer from './components/footer/Footer';
-// import NavItem from './components/ui/NavItem';
+import AnimatedBackground from './components/ui/AnimatedBackground';
+
 function App() {
   return (
   <div className="relative min-h-screen text-white flex flex-col ">

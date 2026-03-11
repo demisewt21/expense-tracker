@@ -1,5 +1,3 @@
-
-
 import { ArrowUp, ArrowDown } from 'lucide-react';
 
 const Dashboard = ({ transactions = [] }) => {
@@ -21,7 +19,7 @@ const Dashboard = ({ transactions = [] }) => {
       {/* Greeting + Balance */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
         <div>
-          <p className="text-emerald-400 text-sm font-medium tracking-[2px]">GOOD EVENING, DEMO 👋</p>
+          <p className="text-emerald-400 text-sm font-medium tracking-[2px]">GOOD EVENING, Demisew 👋</p>
           <h2 className="text-5xl font-semibold tracking-tighter text-white mt-1">
             Your financial overview
           </h2>
